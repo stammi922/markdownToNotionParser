@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: markdown-to-notion-api
+    env: node
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: API_TOKEN
+        value: zAzPdGwTejY3YGdeLmyVkeAVJ9jw2dcE
+      - key: PORT
+        value: 3000
+    autoDeploy: true 
